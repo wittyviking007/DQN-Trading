@@ -90,12 +90,6 @@ class Evaluation:
         mult = 1
         for i in rate_of_return:
             mult = mult * (i + 1)
-
-        # Check if mult is zero before performing the power operation
-        print(rate_of_return)
-        if mult == 0 or len(rate_of_return) == 0:
-            return 0  # Or handle it in a way that makes sense for your use case
-
         return np.power(mult, 1 / len(rate_of_return)) - 1
 
     def total_return(self):
